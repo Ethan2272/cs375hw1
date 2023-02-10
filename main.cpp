@@ -22,7 +22,10 @@ int main()
 
   for(int i = 0; i<len-1; i++)
     {
-    sums[arr[i]+arr[i+1]] = make_pair(i,i+1);
+      for(int j = i+1; j<len-1; j++)
+	{
+	 sums[arr[i]+arr[j]] = make_pair(i,j); 
+	}
     }
   for(int j = 0; j<len; j++)
     {
